@@ -58,7 +58,17 @@ main {
 
 .centered-box h2 {
   font-family: 'Comfortaa', sans-serif;
-  font-weight: 600; /* товстіший для кращої виразності */
+  font-weight: 700; /* товстіший для кращої виразності */
+}
+
+.centered-box p {
+  color: #888; /* приємний сірий колір */
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+}
+
+.centered-text {
+  text-align: center;
 }
 
 /* Шапка */
@@ -102,6 +112,7 @@ main {
 }
 
 .main-nav a {
+  font-family: 'Comfortaa', sans-serif;
   color: #ccc;
   margin: 0 1em;
   text-decoration: none;
