@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Загальні стилі для сторінки */
 html, body {
   height: 100%;
@@ -110,6 +114,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  margin-bottom: 1.0em;
 }
 
 .guide-item {
@@ -120,6 +125,7 @@ main {
   text-decoration: none;
   color: inherit;
   display: flex;
+  flex-direction: row;
   gap: 1em;
   align-items: center;
 }
@@ -133,7 +139,7 @@ main {
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {
-    font-size: 1.0em;
+    font-size: 1.3em;
     /*flex-direction: column;*/
     gap: 0.3em;
   }
@@ -165,12 +171,13 @@ main {
   }
 
   .guide-item {
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: flex-start;
   }
 
   .guide-item img {
-    width: 80px;
+    width: 70px;
+    height: auto;
   }
 }
 
@@ -198,4 +205,14 @@ main {
   .centered-box {
     padding: 1em;
   }
+
+    .guide-item {
+      /*flex-direction: column;*/
+      align-items: flex-start;
+    }
+
+    .guide-item img {
+      width: 90px;
+      height: auto;
+    }
 }
