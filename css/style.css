@@ -9,11 +9,18 @@ html, body {
     background: url("../images/bg.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #333;
+    overflow-x: hidden;*/
 }
 
 /* Головна секція розтягується на всю висоту */
 main {
     flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Централізований контейнер */
