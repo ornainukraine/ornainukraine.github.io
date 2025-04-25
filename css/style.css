@@ -61,6 +61,11 @@ main {
   font-weight: 700; /* товстіший для кращої виразності */
 }
 
+.centered-box h3 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700; /* товстіший для кращої виразності */
+}
+
 .centered-box p {
   color: #888; /* приємний сірий колір */
   font-family: 'Comfortaa', sans-serif;
