@@ -130,3 +130,24 @@ img {
     height: 90px;
     width: auto;
 }
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2em;
+    gap: 0.3em;
+    flex-direction: column;
+  }
+
+  .logo-image {
+    height: 48px;
+  }
+
+  .main-nav a {
+    font-size: 0.9em;
+    margin: 0 0.5em;
+  }
+
+  .container {
+    padding: 0.5em;
+  }
+}
