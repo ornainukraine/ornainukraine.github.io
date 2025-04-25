@@ -1,157 +1,168 @@
 /* Загальні стилі для сторінки */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: system-ui, sans-serif;
-    background: url("../images/bg.jpg") no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-    /*overflow-x: hidden;*/
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  overflow-x: hidden;
 }
 
-/* Головна секція розтягується на всю висоту */
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
-    flex: 1;
+  flex: 1;
 }
-/*
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}*/
 
-/* Централізований контейнер */
 .container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
 }
 
 /* Центральний блок з контентом */
 .centered-box {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
-    margin: auto;
-    padding: 2em;
-    backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  margin: auto;
+  padding: 2em;
+  backdrop-filter: blur(4px);
 }
 
 /* Шапка */
 .site-header {
-    background: rgba(27, 27, 27, 0.9);
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
+  background: rgba(27, 27, 27, 0.9);
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
 }
 
 /* Футер */
 .site-footer {
-    background: rgba(27, 27, 27, 0.9);
-    color: #fff;
-    font-size: 10px;
-    padding: 2px 0;
-    text-align: center;
+  background: rgba(27, 27, 27, 0.9);
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 0;
+  text-align: center;
 }
 
 /* Логотип */
 .logo {
-    font-size: 2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 2em;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+}
+
+.logo-image {
+  height: 90px;
+  width: auto;
 }
 
 /* Меню */
 .main-nav {
-    margin-top: 1em; /* Відступ між логотипом і меню */
+  margin-top: 1em;
 }
 
 .main-nav a {
-    color: #ccc;
-    margin: 0 1em;
-    text-decoration: none;
+  color: #ccc;
+  margin: 0 1em;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: #fff;
-    font-weight: bold;
+  color: #fff;
+  font-weight: bold;
 }
 
 /* Заголовки */
 .hero h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
 /* Список гідів */
 .guides-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .guide-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 1em;
-    border-radius: 8px;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    gap: 1em;
-    align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: 1em;
+  align-items: center;
 }
 
 .guide-item img {
-    width: 100px;
-    height: auto;
-    border-radius: 8px;
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
 }
 
-.logo {
-    font-family: 'Uncial Antiqua', serif;
-    font-size: 2em;
-    font-weight: normal;
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*gap: 0.1em;*/
-}
-
-.logo-image {
-    height: 90px;
-    width: auto;
-}
-
+/* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {
     font-size: 1.2em;
-    gap: 0.3em;
     flex-direction: column;
+    gap: 0.3em;
   }
 
   .logo-image {
     height: 48px;
   }
 
-  .main-nav a {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
     font-size: 0.9em;
-    margin: 0 0.5em;
+  }
+
+  .main-nav a {
+    margin: 0.2em 0.4em;
+    font-size: 0.9em;
   }
 
   .container {
-    padding: 0.2em;
+    padding: 0.5em;
+  }
+
+  .guide-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .guide-item img {
+    width: 80px;
   }
 }
 
+/* 🔽 Адаптивні стилі для планшета (481px – 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .logo {
     font-size: 1.6em;
@@ -168,6 +179,6 @@ img {
   }
 
   .container {
-    padding: 0.5em;
+    padding: 0.75em;
   }
 }
