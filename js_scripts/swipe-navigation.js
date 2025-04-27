@@ -33,7 +33,7 @@ console.log('Swipe script loaded!');
     // плавне затемнення перед переходом
     const transition = document.getElementById('page-transition');
     if (transition) {
-      transition.style.opacity = '1';
+      transition.classList.add('active');
     }
 
     setTimeout(() => {
