@@ -173,13 +173,13 @@ main {
 }
 
 /* Стилі для плавного затемнення при переході між сторінками */
-#page-transition {
+.page-transition {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2); /* замість чорного непрозорого зробити напівпрозорий */
+  background: rgba(50, 50, 50, 0.2); /* замість чорного непрозорого зробити напівпрозорий */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -187,7 +187,7 @@ main {
 }
 
 .page-transition.active {
-  opacity: 0.5; /* Можна змінити 0.5 на 0.7 для більш темного ефекту */
+  opacity: 0.2; /* Можна змінити 0.5 на 0.7 для більш темного ефекту */
   pointer-events: all;
 }
 
