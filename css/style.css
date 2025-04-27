@@ -168,6 +168,12 @@ main {
   height: auto;
 }
 
+.guide-item p {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  text-indent: 0.5em;
+}
+
 .site-footer .container {
   padding: 0;
 }
