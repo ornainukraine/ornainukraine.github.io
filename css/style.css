@@ -205,15 +205,23 @@ main {
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  display: none; /* тільки display: none тут */
+  display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s, opacity 0.3s;
+  opacity: 0; /* Спочатку повністю прозора */
+  pointer-events: none; /* Кнопка не клікабельна поки невидима */
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
   background-color: rgba(40, 40, 40, 0.9);
 }
+
+#scrollToTopBtn.visible {
+  opacity: 1; /* При появі — робимо повністю видимою */
+  pointer-events: all; /* Дозволяємо клікати */
+}
+
 
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {

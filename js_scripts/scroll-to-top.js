@@ -1,20 +1,19 @@
 // js_scripts/scroll-to-top.js
 
-(function() {
-  const scrollBtn = document.getElementById('scrollToTopBtn');
+// Коли сторінка прокручується, перевіряємо положення
+window.addEventListener('scroll', function() {
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  if (window.scrollY > 100) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
 
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 300) {
-      scrollBtn.style.display = 'flex';
-    } else {
-      scrollBtn.style.display = 'none';
-    }
+// Клік на кнопку прокрутить вгору
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
-
-  scrollBtn.addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-})();
+}
