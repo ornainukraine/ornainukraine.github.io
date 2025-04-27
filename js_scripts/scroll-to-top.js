@@ -1,19 +1,33 @@
 // js_scripts/scroll-to-top.js
 
-// Коли сторінка прокручується, перевіряємо положення
-window.addEventListener('scroll', function() {
+(function() {
   const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-  if (window.scrollY > 100) {
-    scrollToTopBtn.classList.add('visible');
-  } else {
-    scrollToTopBtn.classList.remove('visible');
-  }
-});
 
-// Клік на кнопку прокрутить вгору
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+  // Перевірка браузера: чи це Microsoft Edge
+  function isEdgeBrowser() {
+    return navigator.userAgent.includes('Edg');
+  }
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      scrollToTopBtn.classList.add('visible');
+
+      // Якщо браузер Edge, додати помаранчевий стиль
+      if (isEdgeBrowser()) {
+        scrollToTopBtn.classList.add('edge-style');
+      } else {
+        scrollToTopBtn.classList.remove('edge-style');
+      }
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+      scrollToTopBtn.classList.remove('edge-style');
+    }
   });
-}
+
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+})();
