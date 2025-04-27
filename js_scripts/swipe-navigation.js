@@ -1,54 +1,52 @@
-let touchstartX = 0;
-let touchendX = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    let touchstartX = 0;
+    let touchendX = 0;
 
-document.addEventListener('touchstart', function(event) {
-    touchstartX = event.changedTouches[0].screenX;
-}, false);
+    const swipeThreshold = 50; // мінімальна довжина свайпу для спрацювання
 
-document.addEventListener('touchend', function(event) {
-    touchendX = event.changedTouches[0].screenX;
-    handleSwipe();
-}, false);
+    // Маршрутизація: на які сторінки переходити
+    const routes = [
+        "index.html",
+        "pages/guides.html",
+        "pages/contacts.html",
+        "pages/faq.html"
+    ];
 
-function handleSwipe() {
-    const swipeThreshold = 50;
-
-    if (touchendX < touchstartX - swipeThreshold) {
-        goNextPage();
+    function getCurrentPageIndex() {
+        const path = window.location.pathname;
+        return routes.findIndex(route => path.endsWith(route));
     }
-    if (touchendX > touchstartX + swipeThreshold) {
-        goPreviousPage();
+
+    function triggerTransition(url) {
+        const transition = document.getElementById('page-transition');
+        if (transition) {
+            transition.classList.add('active');
+        }
+        setTimeout(() => {
+            window.location.href = url;
+        }, 300);
     }
-}
 
-function triggerTransition(nextUrl) {
-    const transition = document.getElementById('page-transition');
-    transition.classList.add('active');
-    setTimeout(() => {
-        window.location.href = nextUrl;
-    }, 300);
-}
+    function handleSwipe() {
+        const currentIndex = getCurrentPageIndex();
+        if (currentIndex === -1) return; // Якщо сторінка не знайдена — нічого не робимо
 
-function goNextPage() {
-    const currentPage = window.location.pathname;
-
-    if (currentPage.includes("index.html")) {
-        triggerTransition("pages/guides.html");
-    } else if (currentPage.includes("guides.html")) {
-        triggerTransition("pages/contacts.html");
-    } else if (currentPage.includes("contacts.html")) {
-        triggerTransition("pages/faq.html");
+        if (touchendX < touchstartX - swipeThreshold && currentIndex < routes.length - 1) {
+            // Свайп вліво → вперед
+            triggerTransition(routes[currentIndex + 1]);
+        }
+        if (touchendX > touchstartX + swipeThreshold && currentIndex > 0) {
+            // Свайп вправо → назад
+            triggerTransition(routes[currentIndex - 1]);
+        }
     }
-}
 
-function goPreviousPage() {
-    const currentPage = window.location.pathname;
+    document.addEventListener('touchstart', (event) => {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
 
-    if (currentPage.includes("faq.html")) {
-        triggerTransition("pages/contacts.html");
-    } else if (currentPage.includes("contacts.html")) {
-        triggerTransition("pages/guides.html");
-    } else if (currentPage.includes("guides.html")) {
-        triggerTransition("index.html");
-    }
-}
+    document.addEventListener('touchend', (event) => {
+        touchendX = event.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+});
