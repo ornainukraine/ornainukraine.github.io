@@ -301,3 +301,14 @@ main {
     max-width: 70px;
   }
 }
+
+/* 🔥 Якщо в браузері темна тема */
+@media (prefers-color-scheme: dark) {
+  #scrollToTopBtn {
+    background-color: rgba(138, 43, 226, 0.8); /* фіолетово-рожевий */
+  }
+
+  #scrollToTopBtn:hover {
+    background-color: rgba(186, 85, 211, 0.9); /* яскравіший на ховері */
+  }
+}
