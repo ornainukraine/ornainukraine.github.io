@@ -1,54 +1,75 @@
 console.log('Swipe script loaded!');
 
-document.addEventListener('DOMContentLoaded', () => {
-    let touchstartX = 0;
-    let touchendX = 0;
+// js_scripts/swipe-navigation-advanced.js
 
-    const swipeThreshold = 50; // мінімальна довжина свайпу для спрацювання
+(function() {
+  let startX = null;
+  const threshold = 50; // мінімальна дистанція свайпу в пікселях
 
-    // Маршрутизація: на які сторінки переходити
-    const routes = [
-        "index.html",
-        "pages/guides.html",
-        "pages/contacts.html",
-        "pages/faq.html"
+  document.addEventListener('touchstart', function(event) {
+    if (event.touches.length === 1) {
+      startX = event.touches[0].clientX;
+    }
+  }, { passive: true });
+
+  document.addEventListener('touchend', function(event) {
+    if (startX === null) return;
+
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+
+    // захист від випадкових дотиків
+    if (Math.abs(deltaX) < threshold) {
+      startX = null;
+      return;
+    }
+
+    // плавне затемнення перед переходом
+    const transition = document.getElementById('page-transition');
+    if (transition) {
+      transition.style.opacity = '1';
+    }
+
+    setTimeout(() => {
+      navigatePage(deltaX);
+    }, 300); // трохи часу для анімації
+
+    startX = null;
+  }, { passive: true });
+
+  function navigatePage(deltaX) {
+    const path = window.location.pathname;
+    const isRoot = path === '/' || path.endsWith('/index.html');
+
+    const pages = [
+      'index.html',
+      'pages/guides.html',
+      'pages/contacts.html',
+      'pages/faq.html'
     ];
 
-    function getCurrentPageIndex() {
-        const path = window.location.pathname;
-        return routes.findIndex(route => path.endsWith(route));
+    let currentPage = path.split('/').pop();
+    if (!currentPage || currentPage === '') currentPage = 'index.html';
+
+    const currentIndex = pages.indexOf(currentPage);
+    if (currentIndex === -1) return;
+
+    let targetPage = null;
+
+    if (deltaX < 0 && currentIndex < pages.length - 1) {
+      // свайп вліво
+      targetPage = pages[currentIndex + 1];
+    } else if (deltaX > 0 && currentIndex > 0) {
+      // свайп вправо
+      targetPage = pages[currentIndex - 1];
     }
 
-    function triggerTransition(url) {
-        const transition = document.getElementById('page-transition');
-        if (transition) {
-            transition.classList.add('active');
-        }
-        setTimeout(() => {
-            window.location.href = url;
-        }, 300);
+    if (targetPage) {
+      if (isRoot) {
+        window.location.href = targetPage;
+      } else {
+        window.location.href = '../' + targetPage;
+      }
     }
-
-    function handleSwipe() {
-        const currentIndex = getCurrentPageIndex();
-        if (currentIndex === -1) return; // Якщо сторінка не знайдена — нічого не робимо
-
-        if (touchendX < touchstartX - swipeThreshold && currentIndex < routes.length - 1) {
-            // Свайп вліво → вперед
-            triggerTransition(routes[currentIndex + 1]);
-        }
-        if (touchendX > touchstartX + swipeThreshold && currentIndex > 0) {
-            // Свайп вправо → назад
-            triggerTransition(routes[currentIndex - 1]);
-        }
-    }
-
-    document.addEventListener('touchstart', (event) => {
-        touchstartX = event.changedTouches[0].screenX;
-    }, false);
-
-    document.addEventListener('touchend', (event) => {
-        touchendX = event.changedTouches[0].screenX;
-        handleSwipe();
-    }, false);
-});
+  }
+})();

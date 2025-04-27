@@ -172,20 +172,23 @@ main {
   padding: 0;
 }
 
+/* Стилі для плавного затемнення при переході між сторінками */
 .page-transition {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.2);
-  pointer-events: none;
+  background-color: #000;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
   z-index: 9999;
 }
+
 .page-transition.active {
-  opacity: 1;
+  opacity: 0.5; /* Можна змінити 0.5 на 0.7 для більш темного ефекту */
+  pointer-events: all;
 }
 
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
