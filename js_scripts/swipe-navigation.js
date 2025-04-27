@@ -23,6 +23,13 @@ console.log('Swipe script loaded!');
       return;
     }
 
+    // визначити, чи дозволено свайпати в даному напрямку
+    const allowed = isSwipeAllowed(deltaX);
+    if (!allowed) {
+      startX = null;
+      return;
+    }
+
     // плавне затемнення перед переходом
     const transition = document.getElementById('page-transition');
     if (transition) {
@@ -61,6 +68,31 @@ console.log('Swipe script loaded!');
     if (targetPage) {
       window.location.href = targetPage;
     }
+  }
+
+  function isSwipeAllowed(deltaX) {
+    const pages = [
+      '/index.html',
+      '/pages/guides.html',
+      '/pages/contacts.html',
+      '/pages/faq.html'
+    ];
+
+    const currentPath = window.location.pathname;
+    const index = pages.findIndex(page => currentPath.endsWith(page));
+    if (index === -1) return false;
+
+    if (deltaX > 0 && index === 0) {
+      // спроба свайпу вправо на першій сторінці — заборонено
+      return false;
+    }
+
+    if (deltaX < 0 && index === pages.length - 1) {
+      // спроба свайпу вліво на останній сторінці — заборонено
+      return false;
+    }
+
+    return true;
   }
 })();
 
