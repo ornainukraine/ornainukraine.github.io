@@ -1,3 +1,5 @@
+console.log('Swipe script loaded!');
+
 document.addEventListener('DOMContentLoaded', () => {
     let touchstartX = 0;
     let touchendX = 0;
