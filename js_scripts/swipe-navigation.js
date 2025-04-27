@@ -1,5 +1,4 @@
 console.log('Swipe script loaded!');
-
 // js_scripts/swipe-navigation-advanced.js
 
 (function() {
@@ -38,38 +37,30 @@ console.log('Swipe script loaded!');
   }, { passive: true });
 
   function navigatePage(deltaX) {
-    const path = window.location.pathname;
-    const isRoot = path === '/' || path.endsWith('/index.html');
-
     const pages = [
-      'index.html',
-      'pages/guides.html',
-      'pages/contacts.html',
-      'pages/faq.html'
+      '/index.html',
+      '/pages/guides.html',
+      '/pages/contacts.html',
+      '/pages/faq.html'
     ];
 
-    let currentPage = path.split('/').pop();
-    if (!currentPage || currentPage === '') currentPage = 'index.html';
-
-    const currentIndex = pages.indexOf(currentPage);
-    if (currentIndex === -1) return;
+    const currentPath = window.location.pathname;
+    const index = pages.findIndex(page => currentPath.endsWith(page));
+    if (index === -1) return;
 
     let targetPage = null;
 
-    if (deltaX < 0 && currentIndex < pages.length - 1) {
+    if (deltaX < 0 && index < pages.length - 1) {
       // свайп вліво
-      targetPage = pages[currentIndex + 1];
-    } else if (deltaX > 0 && currentIndex > 0) {
+      targetPage = pages[index + 1];
+    } else if (deltaX > 0 && index > 0) {
       // свайп вправо
-      targetPage = pages[currentIndex - 1];
+      targetPage = pages[index - 1];
     }
 
     if (targetPage) {
-      if (isRoot) {
-        window.location.href = targetPage;
-      } else {
-        window.location.href = '../' + targetPage;
-      }
+      window.location.href = targetPage;
     }
   }
 })();
+
