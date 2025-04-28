@@ -174,6 +174,24 @@ main {
   text-indent: 0.5em;
 }
 
+.guide-box p {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  text-indent: 0.5em;
+}
+
+.guide-box h4 {
+  color: #888; /* приємний сірий колір */
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+}
+
+.link-with-space {
+  display: block;
+  margin: 1em 0; /* відступ зверху і знизу */
+  text-align: center; /* якщо хочеш вирівняти по центру */
+}
+
 .site-footer .container {
   padding: 0;
 }
