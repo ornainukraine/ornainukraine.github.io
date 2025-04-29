@@ -276,37 +276,37 @@ main {
   border-radius: 8px; /* необов'язково — для краси */
 }
 
-.modal {
-  display: none;
+.zoom-overlay {
   position: fixed;
-  z-index: 9999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #000;
-}
-
-.close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10000;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: none;
+  max-width: 120%;
+  max-height: 120%;
+  overflow: auto;
+}
+
+.zoom-overlay img {
+  display: block;
+  max-width: 100vw;
+  max-height: 100vh;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.zoomable-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  border-radius: 8px;
 }
 
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
@@ -358,6 +358,10 @@ main {
     width: 40px;
     height: 40px;
     font-size: 22px;
+  }
+
+  .zoomable-img {
+    max-width: 90%;
   }
 }
 
