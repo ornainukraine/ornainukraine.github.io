@@ -272,14 +272,6 @@ main {
   align: center;
 }
 
-.bonus-table-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px; /* необов'язково — для краси */
-}
-
 .zoom-overlay {
   touch-action: none;
   overflow: auto;
@@ -298,7 +290,7 @@ main {
 }
 
 .zoom-overlay img {
-  touch-action: auto;
+  touch-action: manipulation;
   transform-origin: center center;
   display: block;
   width: auto;
