@@ -3,19 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   zoomableImages.forEach(img => {
     img.addEventListener("click", function () {
+      // Створюємо оверлей
       const overlay = document.createElement("div");
       overlay.classList.add("zoom-overlay");
 
+      // Створюємо новий <img> — без класу zoomable-img
       const zoomedImg = document.createElement("img");
       zoomedImg.src = img.src;
-      overlay.appendChild(zoomedImg);
+      zoomedImg.alt = img.alt || "";
 
+      // Додаємо картинку в оверлей
+      overlay.appendChild(zoomedImg);
       document.body.appendChild(overlay);
 
-      // Показати оверлей
+      // Відображення
       overlay.style.display = "block";
 
-      // Закриття по кліку
+      // Закриття при кліку
       overlay.addEventListener("click", () => {
         overlay.remove();
       });
