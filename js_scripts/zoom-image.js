@@ -1,5 +1,3 @@
-// js_scripts/zoom-image.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const zoomableImages = document.querySelectorAll(".zoomable-img");
 
@@ -8,19 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const overlay = document.createElement("div");
       overlay.classList.add("zoom-overlay");
 
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("zoom-wrapper");
+
       const zoomedImg = document.createElement("img");
       zoomedImg.src = img.src;
-      overlay.appendChild(zoomedImg);
+      zoomedImg.alt = img.alt || "";
+
+      wrapper.appendChild(zoomedImg);
+      overlay.appendChild(wrapper);
       document.body.appendChild(overlay);
-      overlay.style.display = "block";
 
-      // Підключаємо Panzoom для pinch-to-zoom
-      Panzoom(zoomedImg, {
-        maxScale: 5,
-        contain: 'outside'
-      });
-
-      // Закриття по кліку
       overlay.addEventListener("click", () => {
         overlay.remove();
       });

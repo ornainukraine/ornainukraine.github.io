@@ -273,32 +273,31 @@ main {
 }
 
 .zoom-overlay {
-  touch-action: none;
-  overflow: auto;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 10000;
   background: rgba(0, 0, 0, 0.7);
-  padding: 0; /* прибираємо внутрішні відступи */
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  display: none;
-  max-width: 100vw; /* обмеження по ширині вікна */
-  max-height: 100vh; /* обмеження по висоті вікна */
+  overflow: auto;
+  touch-action: none; /* Блокує масштабування сторінки */
+}
+
+.zoom-overlay .zoom-wrapper {
+  touch-action: pan-x pan-y; /* Дозволяє жестову взаємодію всередині wrapper */
+  overscroll-behavior: contain; /* запобігає прокрутці батьків */
 }
 
 .zoom-overlay img {
-  touch-action: manipulation;
-  transform-origin: center center;
-  display: block;
+  max-width: none;
+  max-height: none;
   width: auto;
-  max-width: 100vw;
-  max-height: 100vh;
-  margin: auto;
+  height: auto;
   border-radius: 8px;
+  display: block;
 }
+
 
 .zoomable-img {
   max-width: 100%;
