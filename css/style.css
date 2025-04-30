@@ -285,7 +285,7 @@ main {
 }
 
 body#index .hit-counter {
-  display: block;
+  display: block !important;
   text-align: center;
   margin-top: 1em;
 }
