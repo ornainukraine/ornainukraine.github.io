@@ -280,6 +280,16 @@ main {
   border-radius: 8px;
 }
 
+.hit-counter {
+  display: none;
+}
+
+body#index .hit-counter {
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+}
+
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {
