@@ -291,6 +291,11 @@ main {
   font-size: 14px;
 }
 
+.google-docs {
+  width: 10px;
+  height: auto;
+}
+
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {
