@@ -280,6 +280,17 @@ main {
   border-radius: 8px;
 }
 
+.small-img{
+  max-width: 20px;
+  height: auto;
+}
+
+.guide-box pre {
+  color: #888; /* приємний сірий колір */
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+}
+
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {

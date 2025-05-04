@@ -1,57 +1,574 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orna in Ukraine</title>
-  <link rel="stylesheet" href="../../css/style.css" />
-  <link rel="icon" type="image/png" href="../../images/logo_01.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Orna in Ukraine</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="icon" type="image/png" href="../../images/logo_01.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="container">
-      <a href="../../index.html" class="logo">
-      <img src="../../images/logo_01.png" class="logo-image" />
-      ORNA IN UKRAINE
-      </a>
-      <nav class="main-nav">
-        <a href="../../index.html">Головна</a>
-        <a href="../guides.html" class="active">Гайди</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../contacts.html">Контакти</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-      <div class="centered-box">
-        <h1>Дебафи</h1>
-
-        <a class="guide-item"
-           href="https://docs.google.com/document/d/1um-7AD55SpkTAUw_x9O335I5LYfRQSdZuwRZmjITVr8/edit?usp=sharing"
-           target="_blank"
-           rel="noopener noreferrer">
-          <img src="../../images/google_01.png" alt="pic"/>
-          <div>
-            <h3>Дебафи</h3>
-            <p>google docs</p>
-          </div>
+        <a href="../../index.html" class="logo">
+            <img src="../../images/logo_01.png" class="logo-image"/>
+            ORNA IN UKRAINE
         </a>
-
-        <br>
-        <img src="../../images/construction_01.png" class="responsive-img" alt="pic">
-
-      </div>
+        <nav class="main-nav">
+            <a href="../../index.html">Головна</a>
+            <a href="../guides.html" class="active">Гайди</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../contacts.html">Контакти</a>
+        </nav>
     </div>
-  </main>
+</header>
 
-  <footer class="site-footer">
+<main>
     <div class="container">
-      <p>&copy; 2025 Orna in Ukraine. Усі права захищено.</p>
+        <div class="centered-box">
+
+            <div class="guide-box">
+                <img src="../../images/debuffs_01.png" class="responsive-img" alt="Дебафи"/>
+                <h1>Дебафи</h1>
+
+                <p><b>Debuff</b> - негативний ефект, який може бути накладено на персонажа, або на супротивника.</p>
+                <p><b>D.O.T.</b> (Damage over time) - це дебафи які наносять урон кожен хід, поки висять на персонажі.
+                </p>
+                <br>
+                <p>Розглянемо “ДОТи”, дебафи та як їх нейтралізувати.</p>
+                <br>
+                <p><img src="../../images/statuses/berserk.png" alt="img"> <b>All↑ (Всі↑)</b> - на 25% підвищує всі
+                    характеристики, кожен хід віднімає 10% здоров’я.</p>
+                <br>
+                <p><img src="../../images/statuses/berserk_double.png" alt="img"> <b>All↑↑ (Всі↑↑)</b> - на 50% підвищує
+                    всі характеристики, кожен хід віднімає 25% здоров’я.</p>
+                <br>
+                <p><img src="../../images/statuses/berserk.png" alt="img"> <b>Dmg↑ (Пошк↑)</b> - на 50% підвищує атаку
+                    та магію, кожен хід віднімає 5% здоров’я.</p>
+                <br>
+                <p><img src="../../images/statuses/bloodshift.png" alt="img"> <b>Bloodshift (Зміщення крові)</b> -
+                    блокує відновлення здоров'я. +10% до здоров'я, мани, захисту фіз\маг, спритності. +5% до шансу крита
+                    (шанс спадання 15%).</p>
+                <br>
+                <p><img src="../../images/statuses/bleeding.png" alt="img"> <b>Bleeding (Кровотеча)</b> - кожен хід
+                    віднімає 2% здоров’я, шанс кріт удара -3% (шанс спадання 25%).</p>
+                <br>
+                <p><img src="../../images/statuses/blighted.png" alt="img"> <b>Blight (Неміч)</b> - кожен хід віднімає
+                    2% здоров’я, 25% пропустити хід (шанс спадання 25%).</p>
+                <br>
+                <p><img src="../../images/statuses/burning.png" alt="img"> <b>Burning (Горіння)</b> - кожен хід віднімає
+                    5% здоров’я. -20% до магії та фіз атаки (шанс спадання 10%).</p>
+                <br>
+                <p><img src="../../images/statuses/cursed.png" alt="img"> <b>Cursed (Прокляття)</b> - кожен хід віднімає
+                    10% здоров’я.</p>
+                <br>
+                <p><img src="../../images/statuses/poison.png" alt="img"> <b>Poisoned (Отруєння)</b> - кожен хід
+                    віднімає 2% здоров’я (шанс спадання 10%).</p>
+                <br>
+                <p><img src="../../images/statuses/rot.png" alt="img"> <b>Rot (Гниття)</b> - кожен хід віднімає 3%
+                    здоров’я. -10% маг і фіз захисту (шанс спадання 20%).</p>
+                <br>
+                <p><img src="../../images/statuses/toxic.png" alt="img"> <b>Toxic (Токсичність)</b> - кожен хід віднімає
+                    10% здоров’я. 10% шанс пропустити хід.</p>
+                <br>
+                <p><img src="../../images/statuses/sleep.png" alt="img"> <b>Asleep (Сон)</b> - 100% пропустити хід (шанс
+                    спадання 25%).</p>
+                <br>
+                <p><img src="../../images/statuses/blind.png" alt="img"> <b>Blind (Сліпота)</b> - 50% промаху по
+                    супротивнику, спритність понижена на 90% (шанс спадання 25%).</p>
+                <br>
+                <p><img src="../../images/statuses/frozen.png" alt="img"> <b>Frozen (Замороження)</b> - 40% пропустити
+                    хід (шанс спадання 50%).</p>
+                <br>
+                <p><img src="../../images/statuses/paralyzed.png" alt="img"> <b>Paralyzed (Параліч)</b> - 25% пропустити
+                    хід (шанс спадання 25%).</p>
+                <br>
+                <p><img src="../../images/statuses/petrified.png" alt="img"> <b>Petrified (Окам’яніння)</b> - 100%
+                    пропустити хід (шанс спадання 20%).</p>
+                <br>
+                <p><img src="../../images/statuses/stunned.png" alt="img"> <b>Stunned (Оглушення)</b> - 50% пропустити
+                    хід (шанс спадання 50%).</p>
+                <br>
+                <p><img src="../../images/statuses/drenched.png" alt="img"> <b>Drenched (Вимокший)</b> - 5% пропустити
+                    хід (шанс спадання 5%).</p>
+                <br>
+                <p><img src="../../images/statuses/windswept.png" alt="img"> <b>Windswept (Завітрення)</b> - -50% до
+                    шансу крит атаки (шанс накладання 15%).</p>
+                <br>
+                <p><img src="../../images/statuses/doom.png" alt="img"> <b>Doom (Приречення)</b> - після 5 ходів -
+                    смерть (шанс накладання 50%).</p>
+                <br>
+                <p><img src="../../images/statuses/starstruck.png" alt="img"> <b>Starstruck (Зоретрясіння)</b> - якщо за
+                    5 ходів не використав склянку на відновлення хп або скіл з відновленням - смерть (шанс накладання
+                    3%-10%).</p>
+                <br>
+                <p><img src="../../images/statuses/stasis.png" alt="img"> <b>Stasis (Стазіс)</b> - 100% пропустити хід
+                    (шанс спадання 50%).</p>
+                <br>
+                <p><img src="../../images/statuses/lulled.png" alt="img"> <b>Lulled (Заколисаний)</b> - 20% пропустити
+                    хід (шанс спадання 10%).</p>
+                <br>
+                <p><img src="../../images/statuses/confuse.png" alt="img"> <b>Confused (Збентежений)</b> - може
+                    підмінити використане вами заклинання на щось інше, з вашого активного списку заклинань (шанс
+                    спадання 50%).</p>
+                <br>
+
+                <h3>Зілля :</h3>
+
+                <p><img src="../../images/useables/antidote.png" alt="img"> <b>Antidote (Антидот)</b> - лікує від :
+                    Poisoned (Отруєння)</p>
+                <br>
+                <p><img src="../../images/useables/stone_cure.png" alt="img"> <b>Stone Cure (Кам’янисте зілля)</b> -
+                    лікує від : Petrified (Окам’яніння)</p>
+                <br>
+                <p><img src="../../images/useables/cure_all.png" alt="img"> <b>Cure-all (Все-зцілення)</b> - лікує від :
+                    Burning (Горіння), Bleeding (Кровотеча), Frozen (Замороження), Paralyzed (Параліч), Poisoned
+                    (Отруєння), Blight (Неміч), Blind (Сліпота), Asleep (Сон), Rot (Гниття)</p>
+                <br>
+                <p><img src="../../images/useables/nostrum.png" alt="img"> <b>Nostrum (Прополіс)</b> - лікує від : лікує
+                    від : Burning (Горіння), Bleeding (Кровотеча), Frozen (Замороження), Paralyzed (Параліч), Poisoned
+                    (Отруєння), Blight (Неміч), Blind (Сліпота), Asleep (Сон), Rot (Гниття), Stunned (Оглушення),
+                    Petrified (Окам’яніння), Cursed (Прокляття)</p>
+                <br>
+                <p><img src="../../images/useables/ambrosia.png" alt="img"> <b>Ambrosia (Амброзія)</b> - лікує від : Att
+                    ↓, Mag ↓, Def ↓, Def ↓↓, T. Def ↓, T. Att ↓, T. Mag ↓, T. Res ↓, Res ↓↓, Res ↓, T. Def ↓↓, T. Att
+                    ↓↓, T. Mag ↓↓, T. Res ↓↓, T. Def ↓↓↓, T. Dex ↓</p>
+                <br>
+                <p><img src="../../images/useables/ichor.png" alt="img"> <b>Ichor (Іхор)</b> - лікує від : Att ↓, Mag ↓,
+                    Def ↓, Def ↓↓, T. Def ↓, T. Att ↓, T. Mag ↓, T. Res ↓, Res ↓↓, Res ↓, T. Def ↓↓, T. Att ↓↓, T. Mag
+                    ↓↓, T. Def ↓↓↓, T. Dex ↓</p>
+                <br>
+                <p><img src="../../images/useables/panacea.png" alt="img"> <b>Panacea (Панацея)</b> - лікує від :
+                    Burning (Горіння), Bleeding (Кровотеча), Frozen (Замороження), Paralyzed (Параліч), Poisoned
+                    (Отруєння), Blight (Неміч), Blind (Сліпота), Asleep (Сон), Rot (Гниття), Stunned (Оглушення),
+                    Petrified (Окам’яніння), Cursed (Прокляття), Toxic (Токсичність), Att ↓, Mag ↓, Def ↓, Def ↓↓, Res
+                    ↓↓, Res ↓, Drenched (Вимокший), T. Dex ↓</p>
+                <br>
+
+                <h3>Навички :</h3>
+
+                <p><img src="../../images/spells/heal.png" alt="img" class="small-img"> <b>Cleanse (Чистота)</b> - лікує
+                    від : Burning, Frozen, Paralyzed, Poisoned, Blight, Blind, Asleep, Stunned, Petrified, Cursed, Rot,
+                    Confused, Doom, Starstruck, Windswept.</p>
+                <br>
+                <p><img src="../../images/spells/bleed.png" alt="img" class="small-img"> <b>Cure Bleeding (Джгут)</b> -
+                    лікує від : Bleeding.</p>
+                <br>
+                <p><img src="../../images/spells/blind.png" alt="img" class="small-img"> <b>Cure Blindness
+                    (Прозріння)</b> - лікує від : Blind.</p>
+                <br>
+                <p><img src="../../images/spells/flame.png" alt="img" class="small-img"> <b>Cure Burn (Загасити)</b> -
+                    лікує від : Burning.</p>
+                <br>
+                <p><img src="../../images/spells/ice.png" alt="img" class="small-img"> <b>Cure Frozen (Розмороження)</b>
+                    - лікує від : Frozen.</p>
+                <br>
+                <p><img src="../../images/spells/spark.png" alt="img" class="small-img"> <b>Cure Paralysis
+                    (Заземлення)</b> - лікує від : Paralyzed.</p>
+                <br>
+                <p><img src="../../images/spells/poison.png" alt="img" class="small-img"> <b>Cure Poison
+                    (Протиотрута)</b> - лікує від : Poisoned.</p>
+                <br>
+                <p><img src="../../images/spells/heal.png" alt="img" class="small-img"> <b>Dispel (Розвіяння)</b> -
+                    лікує від : Burning, Bleeding, Frozen, Paralyzed, Poisoned, Blight, Blind, Asleep, Stunned,
+                    Petrified, Cursed, Rot, Windswept.</p>
+                <br>
+                <p><img src="../../images/spells/heal.png" alt="img" class="small-img"> <b>Remedy (Ліки)</b>, <b>Wisp's
+                    Heal (Зцілення вогника)</b>, <b>Wisp's Heal II (Зцілення вогника II)</b> - лікують від : Burning,
+                    Frozen, Paralyzed, Poisoned, Blind, Stunned, Rot.</p>
+                <br>
+
+                <h3>Тваринки :</h3>
+
+                <p><img src="../../images/monsters/fairy.png" alt="img"> <b>Fae</b>
+                    - має спели : Cure Bleeding, Cure Blindness, Cure Burn, Cure Frozen, Cure Paralysis, Cure Poison.
+                </p>
+
+                <br>
+                <p><img src="../../images/bosses/great_pegasus.png" alt="img"> <b>Great Pegasus</b>,
+                    <img src="../../images/monsters/llamrai.png" alt="img"> <b>Llamrai</b>
+                    - мають спел : Cleanse.</p>
+
+                <br>
+                <p><img src="../../images/monsters/pale_dragon.png" alt="img"> <b>Pale Dragon</b>,
+                    <img src="../../images/bosses/fafnir.png" alt="img"> <b>Fafnir</b>,
+                    <img src="../../images/bosses/pegasus.png" alt="img"> <b>Pegasus</b>,
+                    <img src="../../images/bosses/pollux.png" alt="img"> <b>Pollux</b>,
+                    <img src="../../images/monsters/hengreon.png" alt="img"> <b>Hengreon</b>,
+                    <img src="../../images/monsters/alfar.png" alt="img"> <b>Alfar</b>,
+                    <img src="../../images/monsters/steward_dragon.png" alt="img"> <b>Steward Dragon</b>
+                    - мають спел : Dispel.</p>
+
+                <br>
+                <p><img src="../../images/monsters/wisp.png" alt="img"> <b>Wisp</b> - має спел : Wisp's Heal.</p>
+                <br>
+                <p><img src="../../images/monsters/twilight_wisp.png" alt="img"> <b>Twilight Wisp</b> - має спели :
+                    Wisp's Heal, Wisp's Heal II.</p>
+                <br>
+                <p><img src="../../images/monsters/prototype_themis.png" alt="img"> <b>Replica Themis</b> - має спел :
+                    Cleanse</p>
+                <br>
+
+                <h3>Зброя та обладунки :</h3>
+
+                <p>Не дадуть знизити ваші атаку, магію, захист та супротив такі речі :</p>
+                <br>
+                <p><img src="../../images/weapons/crystalis.png" alt="img"> <b>Crystalis</b> - захистить від зниження
+                    att, mag, def, res.</p>
+                <br>
+                <p><img src="../../images/armor/nothren_crown.png" alt="img"> <b>Old Nothren Crown</b> - захистить від
+                    зниження att та mag.</p>
+                <br>
+                <p>Також варто подивитись на речі деяких РБ -
+                    <img src="../../images/bosses/horseman_famine.png" alt="img"> <b>First Horseman</b>,
+                    <img src="../../images/bosses/horseman_pestilence.png" alt="img"> <b>Second Horseman</b>,
+                    <img src="../../images/bosses/horseman_war.png" alt="img"> <b>Third Horseman</b>,
+                    <img src="../../images/bosses/horseman_death.png" alt="img"> <b>Final Horseman</b>,
+                    <img src="../../images/bosses/meliodas.png" alt="img"> <b>False King Meliodas</b>,
+                    <img src="../../images/bosses/macha.png" alt="img"> <b>Sister Macha</b>,
+                    <img src="../../images/bosses/merlin.png" alt="img"> <b>Merlin</b>,
+                    <img src="../../images/bosses/fey_yeti.png" alt="img"> <b>Fey Yeti</b>
+                    та мобів
+                    <img src="../../images/monsters/great_yeti.png" alt="img"> <b>Yeti</b>.</p>
+                <br>
+
+                <h4>Список зброї та обладунків з імунами :</h4>
+                <pre>
+                <b>Asleep</b>
+
+                Dusk Armor
+                Dusk Boots
+                Dusk Cowl
+                Dusk Garb
+                Dusk Helmet
+                Dusk Hood
+                Dusk Robe
+                Duskbreaker [bow]
+                Duskbreaker [staff]
+                Duskbreaker [sword]
+                Neman's Protection
+                Nightbreak [bow]
+                Nightbreak [staff]
+                Nightbreak [sword]
+                </pre>
+
+                <pre>
+                <b>Bleeding</b>
+
+                Amergin's Razor
+                Arisen Nagamaki
+                Excalibur
+                Nagamaki
+                </pre>
+
+                <pre>
+                <b>Blight</b>
+
+                Smelly Shoes
+                </pre>
+
+                <pre>
+                <b>Blind</b>
+
+                Arisen Hel's Garb
+                Ashen Phoenician Shield
+                Dawnbreaker [bow]
+                Dawnbreaker [staff]
+                Dawnbreaker [sword]
+                Daybreak [bow]
+                Daybreak [staff]
+                Daybreak [sword]
+                Dusk Armor
+                Dusk Boots
+                Dusk Cowl
+                Dusk Garb
+                Dusk Helmet
+                Dusk Hood
+                Dusk Robe
+                Duskbreaker [bow]
+                Duskbreaker [staff]
+                Duskbreaker [sword]
+                Everlasting Torch
+                Fey Gazing Staff
+                Great Phoenician Shield
+                Hel's Garb
+                High Phoenician Shield
+                Immortal Boots
+                Immortal Garb
+                Immortal Hat
+                Immortal Hood
+                Immortal Robe
+                Nightbreak [bow]
+                Nightbreak [staff]
+                Nightbreak [sword]
+                Phoenician Shield
+                </pre>
+
+                <pre>
+                <b>Burning</b>
+
+                Beguiled Mystic Katar
+                Dawnbreaker [bow]
+                Dawnbreaker [staff]
+                Dawnbreaker [sword]
+                Daybreak [bow]
+                Daybreak [staff]
+                Daybreak [sword]
+                Fomor Staff
+                Great Phoenician Shield
+                Hallowed Witch's Hat
+                High Phoenician Shield
+                Ifrit's Feet
+                Mystic Katar
+                Phoenician Shield
+                Robe of the North
+                Vulcan Boots
+                Vulcan Buckler
+                Vulcan Cuirass
+                Vulcan Helmet
+                </pre>
+
+                <pre>
+                <b>Cursed</b>
+
+                Arisen Balor Crown
+                Arisen Shield
+                Avalon Crown
+                Baldr Battlerobe
+                Baldr Boots
+                Baldr Hood
+                Fallen Shield
+                Final Horseman's Armor
+                Final Horseman's Cloak
+                First Horseman's Armor
+                First Horseman's Cloak
+                Second Horseman's Armor
+                Second Horseman's Cloak
+                Third Horseman's Armor
+                Third Horseman's Cloak
+                </pre>
+
+                <pre>
+                <b>Frozen</b>
+
+                Arisen Kerberos Hood
+                Beguiled Mystic Katar
+                Fey Yeti Coat
+                Fomor Staff
+                Hallowed Witch's Hat
+                Kerberos Hood
+                Kerberos Hood
+                Kerberos Veil
+                Leviathan Cuirass
+                Mystic Katar
+                Yeti Coat
+                Yeti Mightycoat
+                Yeti Overcoat
+                </pre>
+
+                <pre>
+                <b>Paralyzed</b>
+
+                Beguiled Mystic Katar
+                Caladbolg
+                Fomor Staff
+                Hallowed Witch's Hat
+                Mystic Katar
+                Taranis Hood
+                Petrified
+                Aegis
+                Avalon Crown
+                Cliffside Cuirass
+                Cockatrice Mail
+                Polished Aegis
+                Ymir Cliffside Cuirass
+                </pre>
+
+                <pre>
+                <b>Poisoned</b>
+
+                Arisen Naggeneen's Hat
+                Naggeneen's Hat
+                Smelly Shoes
+                </pre>
+
+                <pre>
+                <b>Rot</b>
+
+                Beguiled Mystic Katar
+                Gaia Robe
+                Hallowed Witch's Hat
+                Mystic Katar
+                </pre>
+
+                <pre>
+                <b>Stunned</b>
+
+                Aldon's Hat
+                Annwn Rapier
+                Arisen Askr Boots
+                Arisen Askr Leggings
+                Arisen Embla Shoes
+                Arisen Hel's Garb
+                Askr Boots
+                Askr Leggings
+                Atlas
+                Embla Shoes
+                Heimdall's Shield
+                Hel's Garb
+                </pre>
+
+                <pre>
+                <b>Toxic</b>
+
+                Arisen Naggeneen's Hat
+                Briny Pendant
+                Naggeneen's Hat
+                </pre>
+                <br>
+
+
+                <h3>Аксесуари :</h3>
+
+                <p>Ці речі не дадуть знизити ваші фізичну/магічну атаки, захист та супротив:</p>
+                <br>
+                <p><img src="../../images/acc/gadget.png" alt="img"> <b>Gadget</b> - захистить від зниження def та res
+                    (в залежності від тіру буде більше захистів).</p>
+                <br>
+                <p><img src="../../images/acc/gizmo.png" alt="img"> <b>Gizmo</b> - захистить від зниження att та mag (в
+                    залежності від тіру буде більше захистів).</p>
+                <br>
+                <p><img src="../../images/acc/cursed_ring.png" alt="img"> <b>Ring of Night</b> - захистить від зниження
+                    att та mag.</p>
+                <br>
+                <p><img src="../../images/acc/cursed_ring.png" alt="img"> <b>Ring of day</b> - захистить від зниження
+                    def та res.</p>
+                <br>
+
+                <pre>
+                <b>Asleep</b>
+
+                Ankou's Ring
+                Waking Pendant
+                </pre>
+
+                <pre>
+                <b>Blight</b>
+
+                Blight Pendant
+                Briny Pendant
+                </pre>
+
+                <pre>
+                <b>Blind</b>
+
+                Fey Eye
+                </pre>
+
+                <pre>
+                <b>Burning</b>
+
+                Belt of Cerus
+                Ring of Annwn
+                Waistguard of Cerus
+                </pre>
+
+                <pre>
+                <b>Cursed</b>
+
+                Ankou's Ring
+                </pre>
+
+                <pre>
+                <b>Frozen</b>
+
+                Ring of Annwn
+                </pre>
+
+                <pre>
+                <b>Paralyzed</b>
+
+                Ring of Annwn
+                Vritra Charm
+                Ymir Vritra Charm
+                </pre>
+
+                <pre>
+                <b>Petrified</b>
+
+                Stone Pendant
+                Vritra Charm
+                Ymir Vritra Charm
+                </pre>
+
+                <pre>
+                <b>Poisoned</b>
+
+                Antidote Pendant
+                Briny Pendant
+                </pre>
+
+                <pre>
+                <b>Rot</b>
+
+                Briny Pendant
+                Ring of Annwn
+                </pre>
+
+                <pre>
+                <b>Stunned</b>
+
+                Steady Pendant
+                Vritra Charm
+                Ymir Vritra Charm
+                </pre>
+
+                <pre>
+                <b>Toxic</b>
+
+                Briny Pendant
+                </pre>
+
+
+                <p>Незамінними для вас будуть -
+                    <img src="../../images/acc/cursed_ring.png" alt="img"> <b>Ring of Annwn</b>,
+                    <img src="../../images/acc/blight_pendant.png" alt="img"> <b>Briny Pendant</b>,
+                        <img src="../../images/acc/stone_pendant.png" alt="img"> <b>Stone Pendant</b> (для хай лвл <img src="../../images/acc/vritra_charm_ymir.png" alt="img"> <b>Ymir Vritra Charm</b>).
+                </p>
+
+
+                <h3>Таблиця РБ та їх дебафів :</h3>
+
+                <a href="../../images/debuffs/raid_maluses.png" target="_blank">
+                    <img src="../../images/debuffs/raid_maluses.png" class="zoomable-img" alt="Картинка з бонусами"/>
+                </a>
+
+
+                <!--                <a class="guide-item"-->
+                <!--                   href="https://docs.google.com/document/d/1um-7AD55SpkTAUw_x9O335I5LYfRQSdZuwRZmjITVr8/edit?usp=sharing"-->
+                <!--                   target="_blank"-->
+                <!--                   rel="noopener noreferrer">-->
+                <!--                    <img src="../../images/google_01.png" alt="pic"/>-->
+                <!--                    <div>-->
+                <!--                        <h3>Дебафи</h3>-->
+                <!--                        <p>google docs</p>-->
+                <!--                    </div>-->
+                <!--                </a>-->
+                <!---->
+                <!--                <br>-->
+                <!--                <img src="../../images/construction_01.png" class="responsive-img" alt="pic">-->
+
+            </div>
+        </div>
     </div>
-  </footer>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2025 Orna in Ukraine. Усі права захищено.</p>
+    </div>
+</footer>
 </body>
 </html>
