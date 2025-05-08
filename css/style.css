@@ -310,6 +310,19 @@ main {
   margin-right: 1px;
 }
 
+.command-block {
+  background-color: #f0f0f0;
+  color: #222;
+  font-family: monospace;
+  font-size: 15px;
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  margin: 0.5em auto;
+  display: block; /* робить елемент блочним для центрування */
+  text-align: center;
+  max-width: fit-content;
+}
+
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {
