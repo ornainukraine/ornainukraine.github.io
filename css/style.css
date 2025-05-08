@@ -296,6 +296,20 @@ main {
   height: auto;
 }
 
+.quote{
+  color: #4ad;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 10px;
+}
+
+.img-inline-icon {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {
