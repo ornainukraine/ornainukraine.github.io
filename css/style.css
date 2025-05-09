@@ -310,6 +310,11 @@ main {
   margin-right: 1px;
 }
 
+.img-inline-icon2 {
+  width: 25px;
+  height: 25px;
+}
+
 .command-block {
   background-color: #f0f0f0;
   color: #222;
