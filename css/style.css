@@ -158,7 +158,7 @@ main {
   display: flex;
   flex-direction: row;
   gap: 1em;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .guide-item:hover {
