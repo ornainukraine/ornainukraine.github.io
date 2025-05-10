@@ -339,6 +339,39 @@ main {
   max-width: fit-content;
 }
 
+.toc {
+  font-family: 'Comfortaa', sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(80, 120, 80, 0.4);
+}
+
+.toc h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc ul li {
+  margin-bottom: 8px;
+}
+
+.toc ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toc ul li a:hover {
+  text-decoration: underline;
+}
+
 /* 🔽 Адаптивні стилі для мобільного (до 480px) */
 @media (max-width: 480px) {
   .logo {
