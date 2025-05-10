@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: system-ui, sans-serif;
-  background: url("../images/bg_01.png") no-repeat center center fixed;
+  background: url("../images/img_pages/bg_01.png") no-repeat center center fixed;
   background-size: cover;
   color: #333;
   overflow-x: hidden;
@@ -159,6 +159,17 @@ main {
   flex-direction: row;
   gap: 1em;
   align-items: flex-start;
+}
+
+.title-with-icon {
+    display: flex;
+    align-items: center; /* Центрує по вертикалі */
+    gap: 10px; /* Відступ між картинкою і текстом */
+}
+
+.title-with-icon img {
+    height: 24px; /* або будь-який бажаний розмір */
+    width: auto;
 }
 
 .guide-item:hover {
