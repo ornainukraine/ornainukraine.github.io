@@ -101,17 +101,17 @@
 
                 <h3 align="center">Обладунки</h3>
 
-                <p>
+                <p class="popup-trigger" data-popup-text="<p>Ця річ випадає з:<br> РБ Кукулькан</p>">
                     <img src="../../images/armor/quet_hood.png" alt="img">
                     <b>Т10 Fallen Sky Hood (Відлога занепалих небес)</b></p>
                 <p>Дає +10% ДО. Має 7 слоти на ГФ.</p>
                 <br>
-                <p>
+                <p class="popup-trigger" data-popup-text="<p>Ця річ випадає з:<br> РБ Кукулькан</p>">
                     <img src="../../images/armor/quet_helm.png" alt="img">
                     <b>Т10 Fallen Sky Helmet (Шолом занепалих небес)</b></p>
                 <p>Дає +10% ДО. Має 7 слоти на ГФ.</p>
                 <br>
-                <p>
+                <p class="popup-trigger" data-popup-text="<p>Ця річ випадає з:<br> РБ Оді</p>">
                     <img src="../../images/nfs/odie/hightier/head.png" alt="img">
                     <b>Т10 Argos (Аргос)</b></p>
                 <p>Дає +20% ДО. Має 8 слотів на ГФ.</p>
@@ -314,8 +314,16 @@
     </div>
 </footer>
 
+<div id="popup-overlay" class="popup-overlay" onclick="hidePopup()"></div>
+
+<div id="popup" class="popup">
+    <span class="popup-close" onclick="hidePopup()">&times;</span>
+    <p id="popup-text">Тут буде текст</p>
+</div>
+
 <button id="scrollToTopBtn">&#8679;</button>
 <script src="../../js_scripts/scroll-to-top.js"></script>
+<script src="../../js_scripts/popup.js"></script>
 
 </body>
 </html>
