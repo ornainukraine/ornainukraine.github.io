@@ -76,6 +76,26 @@ main {
   font-size: 14px;
 }
 
+.centered-box ul,
+.centered-box li,
+.centered-box table,
+.centered-box th,
+.centered-box td {
+  color: #888;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+}
+
+.formula {
+  font-family: monospace;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  color: #444;
+  font-size: 14px;
+}
+
+
 .centered-text {
   text-align: center;
 }
